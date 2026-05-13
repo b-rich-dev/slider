@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 100dvh;
+}
+
+.slider_a{
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.slider_a input{
+    z-index: 2;
+}
+
+.slider_a_wrapper{
+    width: 300%;
+    height: 100%;
+
+    position: absolute;
+    display: flex;
+
+    z-index: 1;
+    transition: all 1s ease-in-out;
+}
+
+.slider_a_element{
+    height: 100%;
+    width: calc(100% / 3);
+}
+
+.element_one{
+    background-color: aquamarine;
+}
+
+.element_two{
+    background-color: brown;
+}
+
+.element_three{
+    background-color: goldenrod;
+}
+
+.slider_a input[value="one"]:checked ~ .slider_a_wrapper{
+    transform: translateX(calc(100% / 3));
+}
+
+.slider_a input[value="two"]:checked ~ .slider_a_wrapper{
+    transform: translateX(0);
+}
+
+.slider_a input[value="three"]:checked ~ .slider_a_wrapper{
+    transform: translateX(calc(-100% / 3));
+}
