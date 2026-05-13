@@ -9,8 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    height: 100dvh;
+    height: 100%;
     gap: 100px;
 }
 
@@ -116,15 +115,41 @@ body {
         transform: translateY(0px) rotate(45deg) scaleX(1) scaleY(1);
     }
 
-    25%{
+    25% {
         transform: translateY(-50px) rotate(45deg) scaleX(1) scaleY(1);
     }
 
-    75%{
+    75% {
         transform: translateY(-50px) rotate(0deg) scaleX(1) scaleY(1);
     }
 
     100% {
         transform: translateY(-50px) rotate(0deg) scaleX(1.5) scaleY(1.5);
     }
+}
+
+
+a {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+}
+
+a:visited{
+    color: rgb(24, 192, 113);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(83, 24, 192);
+    text-decoration: underline;
+}
+
+a:active{
+    color: rgb(192, 24, 24);
+    text-decoration: none;
 }
