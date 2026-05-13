@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +14,7 @@ body{
     gap: 100px;
 }
 
-.slider_a{
+.slider_a {
     position: relative;
     width: 250px;
     height: 150px;
@@ -25,11 +25,11 @@ body{
     overflow: hidden;
 }
 
-.slider_a input{
+.slider_a input {
     z-index: 2;
 }
 
-.slider_a_wrapper{
+.slider_a_wrapper {
     width: 300%;
     height: 100%;
 
@@ -40,42 +40,42 @@ body{
     transition: all 1s ease-in-out;
 }
 
-.slider_a_element{
+.slider_a_element {
     height: 100%;
     width: calc(100% / 3);
 }
 
-.element_one{
+.element_one {
     background-color: aquamarine;
 }
 
-.element_two{
+.element_two {
     background-color: brown;
 }
 
-.element_three{
+.element_three {
     background-color: goldenrod;
 }
 
-.slider_a input[value="one"]:checked ~ .slider_a_wrapper{
+.slider_a input[value="one"]:checked~.slider_a_wrapper {
     transform: translateX(calc(100% / 3));
 }
 
-.slider_a input[value="two"]:checked ~ .slider_a_wrapper{
+.slider_a input[value="two"]:checked~.slider_a_wrapper {
     transform: translateX(0);
 }
 
-.slider_a input[value="three"]:checked ~ .slider_a_wrapper{
+.slider_a input[value="three"]:checked~.slider_a_wrapper {
     transform: translateX(calc(-100% / 3));
 }
 
 
-.slider_b{
+.slider_b {
     height: 300px;
     display: flex;
 }
 
-.slider_b_element{
+.slider_b_element {
     z-index: 1;
     width: 100px;
     height: 80%;
@@ -86,15 +86,45 @@ body{
     transition: all 250ms ease-in-out;
 }
 
-.slider_b_element:hover{
+.slider_b_element:hover {
     z-index: 2;
     background-color: aqua;
     transform: perspective(250px) rotateY(0deg) translateX(0) scaleX(1.5) scaleY(1.2);
     transition: all 250ms ease-in-out;
 }
 
-.slider_b_element:hover ~ .slider_b_element{
+.slider_b_element:hover~.slider_b_element {
     background-color: brown;
     transform: perspective(250px) rotateY(-20deg) translateX(20px);
     transition: all 250ms ease-in-out;
+}
+
+
+.div {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+
+    transform: rotate(48deg);
+    transform-origin: 50% 50%;
+
+    animation: banana 2s ease-in-out forwards;
+}
+
+@keyframes banana {
+    0% {
+        transform: translateY(0px) rotate(45deg) scaleX(1) scaleY(1);
+    }
+
+    25%{
+        transform: translateY(-50px) rotate(45deg) scaleX(1) scaleY(1);
+    }
+
+    75%{
+        transform: translateY(-50px) rotate(0deg) scaleX(1) scaleY(1);
+    }
+
+    100% {
+        transform: translateY(-50px) rotate(0deg) scaleX(1.5) scaleY(1.5);
+    }
 }
